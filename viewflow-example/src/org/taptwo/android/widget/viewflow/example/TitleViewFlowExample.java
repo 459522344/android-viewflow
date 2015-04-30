@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2011 Patrik Åkerfeldt
+ * Copyright (C) 2011 Patrik ÔøΩkerfeldt
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ import org.taptwo.android.widget.ViewFlow;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.widget.ScrollView;
 
 public class TitleViewFlowExample extends Activity {
 
@@ -39,7 +40,8 @@ public class TitleViewFlowExample extends Activity {
 		TitleFlowIndicator indicator = (TitleFlowIndicator) findViewById(R.id.viewflowindic);
 		indicator.setTitleProvider(adapter);
 		viewFlow.setFlowIndicator(indicator);
-		
+		ScrollView mScrollView = (ScrollView) findViewById(R.id.scrollview);
+		viewFlow.setViewGroup(mScrollView);
 	}
 	
 	/* If your min SDK version is < 8 you need to trigger the onConfigurationChanged in ViewFlow manually, like this */	
